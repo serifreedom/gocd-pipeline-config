@@ -1,7 +1,7 @@
 format_version: 2
 pipelines:
   demo-pipeline:
-    group: example
+    group: todolist
     materials:
       git-repo:
         git: https://github.com/WasinWatt/vue-gotham-todo.git
@@ -9,9 +9,17 @@ pipelines:
     stages:
       - first-stage:
           jobs:
-            first-job:
+            list:
               tasks:
                 - exec:
                     command: ls
                     arguments:
                       - .
+      - second-stage:
+          jobs:
+            cat-readme:
+              tasks:
+                - exec:
+                    command: cat
+                    arguments:
+                      - README.md
