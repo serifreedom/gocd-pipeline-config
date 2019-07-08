@@ -1,7 +1,7 @@
 format_version: 2
 pipelines:
-  demo-pipeline:
-    group: todolist
+  pipeline-name:
+    group: group-name
     materials:
       git-repo:
         git: https://github.com/WasinWatt/vue-gotham-todo.git
@@ -15,11 +15,3 @@ pipelines:
                     command: ls
                     arguments:
                       - .
-      - second-stage:
-          jobs:
-            cat-readme:
-              tasks:
-                - exec:
-                    command: cat
-                    arguments:
-                      - README.md
