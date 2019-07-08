@@ -1,0 +1,17 @@
+format_version: 2
+pipelines:
+  demo-pipeline:
+    group: example
+    materials:
+      git-repo:
+        git: https://github.com/WasinWatt/vue-gotham-todo.git
+        branch: master
+    stages:
+      - first-stage:
+          jobs:
+            first-job:
+              tasks:
+                - exec:
+                    command: ls
+                    arguments:
+                      - .
