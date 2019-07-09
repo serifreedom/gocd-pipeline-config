@@ -12,6 +12,10 @@ pipelines:
             list:
               tasks:
                 - exec:
+                    command: cd
+                    arguments:
+                      - vue-gotham-todo
+                - exec:
                     command: npm
                     arguments:
                       - install
