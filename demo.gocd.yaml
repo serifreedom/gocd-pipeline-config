@@ -4,7 +4,7 @@ pipelines:
     group: group-name
     materials:
       git-repo:
-        git: https://github.com/WasinWatt/vue-gotham-todo.git
+        git: https://github.com/gotham-learning/vue-gotham-todo.git
         branch: master
     stages:
       - first-stage:
