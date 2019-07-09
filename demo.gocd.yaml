@@ -14,7 +14,7 @@ pipelines:
                 - exec:
                     command: cd
                     arguments:
-                      - vue-gotham-todo
+                      - gotham-todo
                 - exec:
                     command: npm
                     arguments:
