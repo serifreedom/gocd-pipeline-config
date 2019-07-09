@@ -28,7 +28,7 @@ pipelines:
                     pipeline: todo-list
                     stage: install-and-build
                     job: install-and-build
-                    source: gotham-todo/dist/
+                    source: dist
                     is_file: no
                     destination: gotham-todo/
                 - exec:
