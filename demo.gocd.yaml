@@ -28,8 +28,7 @@ pipelines:
                     pipeline: todo-list
                     stage: install-and-build
                     job: install-and-build
-                    source: gotham-todo/dist
-                    is_file: no
+                    source: gotham-todo/dist/
                 - exec:
                     command: ./gotham-todo/apply-infrastructure.sh
                 - exec:
