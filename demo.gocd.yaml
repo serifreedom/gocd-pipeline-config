@@ -12,6 +12,21 @@ pipelines:
             list:
               tasks:
                 - exec:
-                    command: ls
+                    command: npm
                     arguments:
-                      - .
+                      - install
+                - exec:
+                    command: npm
+                    arguments:
+                      - run
+                      - test
+                - exec:
+                    command: npm
+                    arguments:
+                      - lint
+                - exec:
+                    command: ./gotham-todo/build.sh
+                - exec:
+                    command: ./gotham-todo/apply-infrastructure.sh
+                - exec:
+                    command: ./gotham-todo/copy-static-files.sh
