@@ -1,10 +1,10 @@
 format_version: 2
 pipelines:
-  pipeline-name:
+  vue-gotham-todo:
     group: group-name
     materials:
       git-repo:
-        git: https://github.com/gotham-learning/vue-gotham-todo.git
+        git: https://github.com/serifreedom/vue-gotham-todo.git
         branch: master
     stages:
       - first-stage:
@@ -12,9 +12,10 @@ pipelines:
             list:
               tasks:
                 - exec:
-                    command: ls
+                    command: ./gotham-todo/build.sh
                     arguments:
                       - .
                 - exec:
-                    command: ls
-                    
+                    command: ./gotham-todo/apply-infrastructure.sh
+                - exec:
+                    command: ./gotham-todo/copy-static-files.sh    
